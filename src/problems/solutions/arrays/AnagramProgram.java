@@ -30,9 +30,9 @@ public class AnagramProgram {
 
 	public static void main(String[] args) {
 		
-		String subject = "restful";
+		String subject = "a";
 		
-		String anagram = "fluster";
+		String anagram = "b";
 		
 		Anagram anagramObj = new Anagram();
 		
