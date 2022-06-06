@@ -1,4 +1,4 @@
-package problems.solutions.arrays;
+package problems.solutions.codility;
 
 import java.util.Arrays;
 

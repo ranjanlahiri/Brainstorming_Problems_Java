@@ -1,4 +1,4 @@
-package problems.solutions.arrays;
+package problems.solutions.codility;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -56,7 +56,8 @@ class SuffixPrefixSolution {
 			  } 
 		  }
 */		  
-		     	
+    	arrList.forEach(System.out :: println);
+    	
     	if(arrList.size() > 0) { 
     		lengthStr = arrList.stream()
 	    						.mapToInt(s -> s.length())
@@ -107,15 +108,15 @@ public class SuffixPrefix {
 
 	public static void main(String[] args) {
 		
-		//String str = "codility";
+		String str = "codility";
 		
-		//String str1 = "aaabbabb";
+		String str1 = "aaabbabb";
 		
 		String str2 = "aabbaa";
 		
 		SuffixPrefixSolution obj = new SuffixPrefixSolution();
 		
-		System.out.println(obj.findSolution(str2));
+		System.out.println(obj.findSolution(str1));
 		
 	}
 
