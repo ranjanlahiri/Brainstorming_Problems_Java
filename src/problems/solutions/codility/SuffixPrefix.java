@@ -55,8 +55,9 @@ class SuffixPrefixSolution {
 				  } 
 			  } 
 		  }
-*/		  
-    	arrList.forEach(System.out :: println);
+*/
+
+//    	arrList.forEach(System.out :: println);
     	
     	if(arrList.size() > 0) { 
     		lengthStr = arrList.stream()
@@ -74,29 +75,33 @@ class SuffixPrefixSolution {
     	char[] charArr = S.toCharArray();
         
         StringBuffer subStr = new StringBuffer();
-       
-        for(char ch : charArr) {
-        	subStr.append(ch);
+
+        for(int i = 0; i < charArr.length-1 ; i++) {
+        	subStr.append(charArr[i]);
+        	System.out.println(subStr);
         	if(tempMap.containsKey(subStr.toString())) {				
         		tempMap.put(subStr.toString(), tempMap.get(subStr.toString()) + 1);
 			}else {
 				tempMap.put(subStr.toString(), 1);				
 			}
         }
+        System.out.println("============================================");
         return tempMap;
-    }
+    } 
     
-    public HashMap<String, Integer> intializeSuffix(String S,HashMap<String, Integer> mapParam) {
+    
+    public HashMap<String, Integer> intializeSuffix(String S, HashMap<String, Integer> mapParam) {
     	       
-    	char[] charArr = S.toCharArray();
-        
-    	StringBuffer subStr = new StringBuffer();
-        for(int i = charArr.length-1 ; i>=0 ; i--) {
-        	subStr.append(charArr[i]);
-        	if(mapParam.containsKey(subStr.toString())) {				
-        		mapParam.put(subStr.toString(), mapParam.get(subStr.toString()) + 1);
+    	char[] charArr = S.toCharArray();     
+    	
+    	StringBuilder strBuild = new StringBuilder();
+        for(int i = charArr.length-1 ; i>=1 ; i--) {
+        	strBuild.insert(0, charArr[i]);
+        	System.out.println(strBuild);
+        	if(mapParam.containsKey(strBuild.toString())) {				
+        		mapParam.put(strBuild.toString(), mapParam.get(strBuild.toString()) + 1);
 			}else {
-				mapParam.put(subStr.toString(), 1);				
+				mapParam.put(strBuild.toString(), 1);				
 			}
         }    
         return mapParam;
@@ -110,13 +115,13 @@ public class SuffixPrefix {
 		
 		String str = "codility";
 		
-		String str1 = "aaabbabb";
+		String str1 = "abbabba";
 		
-		String str2 = "aabbaa";
+		String str2 = "abba";
 		
 		SuffixPrefixSolution obj = new SuffixPrefixSolution();
 		
-		System.out.println(obj.findSolution(str1));
+		System.out.println(obj.findSolution(str2));
 		
 	}
 
