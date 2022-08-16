@@ -7,8 +7,7 @@ import java.util.Map;
 public class DuplicateCharactersInIncreasingOrder {
 
 	public static void main(String[] args) {
-		//String subject = "Ranjan";
-		
+			
 		String subject = "ddddduukkkwwwwy";
 
 		char[] arr = subject.toLowerCase().trim().toCharArray();
