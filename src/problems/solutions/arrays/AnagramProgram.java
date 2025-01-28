@@ -8,6 +8,7 @@ class Anagram {
 		if(s1.length != s2.length)
 			return false;
 		
+		// Comments
 		// sort the letters of the string
 		// O(Nlog(N)). This is the bottleneck of the algorithm
 		
