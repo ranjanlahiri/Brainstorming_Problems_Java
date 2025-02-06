@@ -60,7 +60,7 @@ public class TwoSum {
 		
 	}
 
-// complexity O(n)	
+// complexity O(n2)	
 	public static int[] twoSum(int[] nums, int target) {
         int [] result = new int[2];
         int i = 0;
@@ -78,6 +78,7 @@ public class TwoSum {
           
     }
 	
+// complexity O(n)	
 	public static int[] twoSumOptimized(int[] nums, int target) {
         int []arr=new int[2];
         Map<Integer,Integer> hm=new HashMap<>();
@@ -87,8 +88,7 @@ public class TwoSum {
                 arr[0]=hm.get(hai);
                 arr[1]=i;
                 return arr;
-            }
-            else{
+            }else{
                 hm.put(nums[i],i);
             }
         }
