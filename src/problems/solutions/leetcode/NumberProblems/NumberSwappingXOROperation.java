@@ -8,7 +8,7 @@ public class NumberSwappingXOROperation {
         
         System.out.println("Before swapping, a = " + a + " and b = " + b);
         
-        // Swapping a and b using XOR
+        //Swapping a and b using XOR
         a = a ^ b;
         b = a ^ b;
         a = a ^ b;
